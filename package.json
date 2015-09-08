@@ -1,0 +1,22 @@
+{
+  "name": "doorglass",
+  "version": "1.0.0",
+  "description": "door glass effect",
+  "main": "doorglass.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotnetCarpenter/doorglass.git"
+  },
+  "author": "dotnetCarpenter <jon.ronnenberg@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dotnetCarpenter/doorglass/issues"
+  },
+  "homepage": "https://github.com/dotnetCarpenter/doorglass#readme",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}
