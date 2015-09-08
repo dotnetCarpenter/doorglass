@@ -12,6 +12,7 @@ var help = ~args.indexOf("--help") || ~args.indexOf("-h")
 args = remove(args, ["--debug", "-d", "--watch", watch])
 //console.log("options", debug, watch, help)
 
+//FIXME: chokidar.watch() seems to only watch the first file matching a glob expression
 var watcher = chokidar.watch(watch, {
   ignored: /[\/\\]\./,
   persistent: true
@@ -19,10 +20,13 @@ var watcher = chokidar.watch(watch, {
 
 if(help) {
   console.log(
-    "usage: gd-watch [options] command [command command *]" +
+    "usage: gd-watch [options] <command> [<command>]*" +
+    "\r\n\r\nWHERE:" +
+    "\r\n<command> = <string>" +
+    "\r\nExample: gd-watch -w example/**/*.css 'npm run build:css' 'rm example/sideeffect.css'" +
     "\r\n\r\nOPTIONS:" +
     "\r\n\t-d | --debug\tverbose" +
-    "\r\n\t-w | --watch\t\twatch glob pattern" +
+    "\r\n\t-w | --watch\twatch glob pattern" +
     "\r\n\t-h | --help\tprint help"
   )
   process.exit(0)

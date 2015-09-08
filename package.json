@@ -30,6 +30,7 @@
     "babel": "^5.8.23",
     "chokidar": "^1.0.5",
     "cssnano": "^3.0.1",
+    "cssnext": "^1.8.4",
     "live-server": "^0.8.1",
     "postcss-cli": "^2.1.0",
     "shelljs": "^0.5.3",
