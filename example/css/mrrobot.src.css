@@ -24,6 +24,12 @@ h1, h2, h3, h4, p {
 html {
   font-size: 0.625vw;
 }
+body {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../image/city-cars-people-street.jpg');
+}
 h1 {
   color: hsla(215, 100%, 34%, 1);
   font-size: 24rem;
@@ -32,7 +38,7 @@ h1 {
   animation-duration: 1s;
   animation-name: fadein;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 .byline {
   color: hsla(215, 100%, 34%, 1);
