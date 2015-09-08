@@ -9,7 +9,7 @@
   "scripts": {
     "test": "tap test/*.js",
     "dev": "live-server --open=example/index.htm --ignore=node_modules/",
-    "predev": "bin/watch.js --debug 'npm run build:css'",
+    "predev": "bin/watch.js --debug --watch example/**/*.src.css 'npm run build:css' &",
     "build:css": "postcss -u autoprefixer -u cssnano example/**/*.src.css > example/css/all.min.css"
   },
   "repository": {
