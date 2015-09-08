@@ -5,7 +5,7 @@
   "main": "doorglass.js",
   "scripts": {
     "test": "tap test/*.js",
-    "dev": "node_modules/.bin/live-server --open=example/index.htm --ignore=node_modules/"
+    "dev": "live-server --open=example/index.htm --ignore=node_modules/"
   },
   "repository": {
     "type": "git",
