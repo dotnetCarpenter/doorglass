@@ -5,7 +5,8 @@
   "main": "doorglass.js",
   "scripts": {
     "test": "tap test/*.js",
-    "dev": "live-server --open=example/index.htm --ignore=node_modules/"
+    "dev": "live-server --open=example/index.htm --ignore=node_modules/",
+    "css": "postcss -u autoprefixer -u cssnano example/**/*.src.css > example/css/all.min.css"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,12 @@
     "jquery": "^2.1.4"
   },
   "devDependencies": {
+    "autoprefixer": "^6.0.2",
     "babel": "^5.8.23",
+    "cssnano": "^3.0.1",
     "live-server": "^0.8.1",
     "postcss-cli": "^2.1.0",
-    "tap": "^1.4.0"
+    "tap": "^1.4.0",
+    "watch": "^0.16.0"
   }
 }

@@ -27,7 +27,6 @@ html {
 h1 {
   color: hsla(215, 100%, 34%, 1);
   font-size: 24rem;
-  font-weight: normal;
   text-align: center;
 
   animation-duration: 1s;
