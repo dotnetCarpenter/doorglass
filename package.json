@@ -4,7 +4,8 @@
   "description": "door glass effect",
   "main": "doorglass.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap test/*.js",
+    "dev": "node_modules/.bin/live-server --open=index.htm --ignore=node_modules/ example"
   },
   "repository": {
     "type": "git",
