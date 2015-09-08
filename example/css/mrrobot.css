@@ -22,7 +22,7 @@ h1, h2, h3, h4, p {
 }
 
 html {
-  font-size: calc(62.5%);
+  font-size: calc(62.5%); /*  / 1600px */
 }
 h1 {
   color: hsla(360, 100%, 100%, 0);
@@ -35,8 +35,16 @@ h1 {
   animation-fill-mode: forwards;
 }
 .byline {
-  color: hsla(360, 100%, 35%, 1);
+  color: hsla(360, 100%, 100%, 0);
   font-size: 6rem;
   text-align: center;
   text-transform: uppercase;
+
+  animation-duration: 250ms;
+  animation-name: fadein;
+  animation-fill-mode: forwards;
+}
+.byline::first-line {
+  font-size: 3rem;
+  line-height: 6rem;
 }
