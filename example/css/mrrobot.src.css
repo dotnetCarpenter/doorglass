@@ -59,6 +59,7 @@ body {
   /*clip-path: polygon(100% 100%);*/
 
   filter: blur(0.3rem);
+  will-change: filter;
   animation: removeblur var(--animation-parameters);
   animation-fill-mode: forwards;
 
@@ -81,6 +82,7 @@ body {
 }
 .dg-content {
   transform-origin: 0 center;
+  will-change: transform;
   animation: openleft var(--animation-parameters);
   animation-fill-mode: forwards;
 }
