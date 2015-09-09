@@ -1,2 +1,4 @@
-example/css/all.min.css
 node_modules
+
+#generated
+example/css/all.min.css
