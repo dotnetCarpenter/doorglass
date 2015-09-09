@@ -1,3 +1,8 @@
+:root {
+  --color-red: hsla(360, 100%, 35%, 1);
+  --color-blue: hsla(215, 100%, 34%, 1);
+}
+
 @font-face {
     font-family: 'nisesegaregular';
     src: url('../font/nisesega-webfont.eot');
@@ -12,7 +17,7 @@
 
 @keyframes fadein {
   to {
-      color: hsla(360, 100%, 35%, 1);
+      color: var(--color-red);
   }
 }
 
@@ -31,7 +36,7 @@ body {
   background-image: url('../image/city-cars-people-street.jpg');
 }
 h1 {
-  color: hsla(215, 100%, 34%, 1);
+  color: var(--color-blue);
   font-size: 24rem;
   text-align: center;
   text-transform: uppercase;
@@ -42,7 +47,7 @@ h1 {
   animation-delay: 1.5s;
 }
 .byline {
-  color: hsla(215, 100%, 34%, 1);
+  color: var(--color-blue);
   font-size: 6rem;
   text-align: center;
   text-transform: uppercase;

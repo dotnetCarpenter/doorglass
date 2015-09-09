@@ -4,13 +4,15 @@
 
 var chokidar = require("chokidar"),
     shell = require("shelljs"),
-    args = process.argv.slice(2).length > 0 ? process.argv.slice(2) : [null]
+    args = process.argv.slice(2).length > 0 ? process.argv.slice(2) : [null],
+    version = require("../package.json").version
 
-var debug = ~args.indexOf("--debug") || ~args.indexOf("-d")
+var verbose = ~args.indexOf("--verbose") || ~args.indexOf("-v")
 var watch = getParameter(args, "--watch")[0] || getParameter(args, "-w")[0] || "."
 var help = ~args.indexOf("--help") || ~args.indexOf("-h")
-args = remove(args, ["--debug", "-d", "--watch", watch])
-//console.log("options", debug, watch, help)
+var showVersion = ~args.indexOf("--version") || ~args.indexOf("-V")
+args = remove(args, ["--verbose", "-v", "--watch", watch])
+//console.log("options", verbose, watch, help)
 
 //FIXME: chokidar.watch() seems to only watch the first file matching a glob expression
 var watcher = chokidar.watch(watch, {
@@ -25,32 +27,38 @@ if(help) {
     "\r\n<command> = <string>" +
     "\r\nExample: gd-watch -w example/**/*.css 'npm run build:css' 'rm example/sideeffect.css'" +
     "\r\n\r\nOPTIONS:" +
-    "\r\n\t-d | --debug\tverbose" +
-    "\r\n\t-w | --watch\twatch glob pattern" +
-    "\r\n\t-h | --help\tprint help"
+    "\r\n\t-h | --help\tprint help" +
+    "\r\n\t-v | --verbose\tverbose output" +
+    "\r\n\t-w | --watch\twatch glob pattern (default is '.' = everything)" +
+    "\r\n\t-V | --version\twatch glob pattern"
   )
   process.exit(0)
 }
 
-if(debug)
-  console.log("Running in debug mode")
+if(showVersion) {
+  console.log("doorglass", version)
+  process.exit(0)
+}
+
+if(verbose)
+  console.log("Running in verbose mode")
 
 watcher
   .on("change", function(file) {
-    if(debug)
+    if(verbose)
       console.log("File", file, "has been changed")
     triggerCommands(args.map(function(cmd) {
-      if(debug)
+      if(verbose)
         console.log("Running command '%s'", cmd)
       return cmd// + " " + file
     }))
   })
   .on("ready", function() {
-    if(debug)
+    if(verbose)
       console.log("Watching...", watch)
   })
   .on("error", function(error) {
-    if(debug)
+    if(verbose)
       console.log("Something fucked up", error)
   })
 
