@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>animate clip</title>
+    <style media="screen">
+      @keyframes show {
+        to { clip: rect(0, 0, 100vw, 0); }
+      }
+      .container {
+        position: absolute;
+        width: 99%;
+        height: 100vw;
+
+        clip: rect(0, 100vw, 100vw, 0);
+        will-change: clip;
+        animation: show 2s ease-out 1s;
+        animation-fill-mode: forwards;
+
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <div class="inner">
+          <p>
+            blahblah yo yo tak to je!
+          </p>
+        </div>
+      </div>
+  </body>
+</html>
