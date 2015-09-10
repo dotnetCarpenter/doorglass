@@ -1,0 +1,6 @@
+Frontend Developer: Jon Ege Ronnenberg
+Contact: jon.ronnenberg [at] gmail.com
+Twitter: @dotnetcarpenter
+
+/* THANKS */
+NiseSega font created by HariHariSonic
