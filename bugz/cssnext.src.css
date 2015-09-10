@@ -1,21 +1,6 @@
-:root {
-  --color-blue: hsla(215, 100%, 34%, 1);
-  --animation-parameters: 1.3s ease-in-out 3s;
-}
-@keyframes removeblur {
-  to { filter: blur(0); }
-}
-.dg-content-container {
-  position: absolute;
-  width: 100%;
-  perspective: 210rem;
-}
-body {
+html {
   font-size: 0.625vw;
-  filter: blur(0.3rem);
-  animation: removeblur var(--animation-parameters);
 }
 h1 {
-  color: var(--color-blue);
-  font-size: 20rem;
+  font-size: 6rem;
 }

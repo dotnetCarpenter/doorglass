@@ -1,33 +1,7 @@
-@-webkit-keyframes removeblur {
-  to { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="0" /></filter></svg>#filter'); -webkit-filter: blur(0); filter: blur(0); }
-}
-@keyframes removeblur {
-  to { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="0" /></filter></svg>#filter'); -webkit-filter: blur(0); filter: blur(0); }
-}
-.dg-content-container {
-  position: absolute;
-  width: 100%; /* calc(100vw - 14px); */
-  /*top: 0;
-  left: 0;
-  height: 100vw;
-  */
-  -webkit-perspective: 210rem;
-          perspective: 210rem;
-}
-body {
+html {
   font-size: 0.625vw;
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="4.8" /></filter></svg>#filter');
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-  -webkit-filter: blur(0.3rem);
-          filter: blur(0.3rem);
-  -webkit-animation: removeblur 1.3s ease-in-out 3s;
-          animation: removeblur 1.3s ease-in-out 3s;
-  -webkit-animation: removeblur 1.3s ease-in-out 3s;
-          animation: removeblur 1.3s ease-in-out 3s;
 }
 h1 {
-  color: hsla(215, 100%, 34%, 1);
-  font-size: 320px;
-  font-size: 20rem;
+  font-size: NaNpx;
+  font-size: 6rem;
 }
