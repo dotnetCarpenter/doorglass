@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "tap test/*.js",
-    "dev": "live-server --wait=3600 --open=example/index.htm --ignore=node_modules",
-    "build:css": "postcss -u autoprefixer -u cssnext example/**/*.src.css > example/css/all.min.css"
+    "dev": "live-server --wait=100 --open=example/index.htm --ignore=node_modules & npm run build:css",
+    "build:css": "cssnext -v --sourcemap --watch --compress --no-rem example/**/*.src.css example/css/all.min.css &"
   },
   "OLDscripts": {
     "predev": "cssnext --no-rem example/**/*.src.css example/css/all.min.css &",

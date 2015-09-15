@@ -44,26 +44,18 @@ html {
 }
 
 body {
-  overflow: hidden;
+  margin: 0;
 }
 .dg-glass-container {
   position: absolute;
   z-index: -100;
-  top: -1%;
-  left: -1%;
-  height: 102%;
-  width: 102%;
-  /*transform: translate(-1%, -1%);*/
+  height: 100%;
+  width: 100%;
 
-  /*clip: rect(99% 99% 1% 1%);*/
-  /*clip-path: polygon(100% 100%);*/
-
-  filter: blur(0.3rem);
+  filter: blur(0.2rem);
   will-change: filter;
   animation: removeblur var(--animation-parameters);
   animation-fill-mode: forwards;
-
-  border: 2px solid red;
 }
 .dg-glass {
   height: 100%;
