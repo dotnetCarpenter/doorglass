@@ -8,12 +8,13 @@
   },
   "scripts": {
     "test": "tap test/*.js",
-    "dev": "live-server --wait=100 --open=example/index.htm --ignore=node_modules & npm run build:css",
-    "build:css": "cssnext -v --sourcemap --watch --compress --no-rem example/**/*.src.css example/css/all.min.css &"
+    "dev": "live-server --wait=100 --open=example/index.htm --ignore=node_modules,*.min.js,example/**/*.src.css",
+    "predev": "npm run build:dep & npm run build:css & npm run build:js",
+    "build:css": "cssnext -v --sourcemap --watch --compress --no-rem example/**/*.src.css example/css/all.min.css &",
+    "build:js": "babel --watch --out-file doorglass.min.js doorglass.js &",
+    "build:dep": "mkdir -p jquery && cp node_modules/jquery/dist/jquery.min.* jquery/"
   },
   "OLDscripts": {
-    "predev": "cssnext --no-rem example/**/*.src.css example/css/all.min.css &",
-    "predev": "cssnext --verbose --compress --watch --sourcemap --no-rem example/**/*.src.css example/css/all.min.css &",
     "predev": "bin/watch.js --debug --watch example/**/*.src.css 'npm run build:css' &"
   },
   "repository": {
@@ -30,13 +31,10 @@
     "jquery": "^2.1.4"
   },
   "devDependencies": {
-    "autoprefixer": "^6.0.2",
     "babel": "^5.8.23",
     "chokidar": "^1.0.5",
-    "cssnano": "^3.0.1",
     "cssnext": "^1.8.4",
     "live-server": "^0.8.1",
-    "postcss-cli": "^2.1.0",
     "shelljs": "^0.5.3",
     "tap": "^1.4.0"
   }
