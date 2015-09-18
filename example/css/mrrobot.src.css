@@ -47,7 +47,7 @@ body {
   margin: 0;
   overflow: hidden;
 }
-.dg-glass-container {
+/*.dg-glass-container {
   position: absolute;
   z-index: -100;
   height: 100%;
@@ -57,7 +57,7 @@ body {
   will-change: filter;
   animation: removeblur var(--animation-parameters);
   animation-fill-mode: forwards;
-}
+}*/
 .dg-glass {
   height: 100%;
   width: 100%;

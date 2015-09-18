@@ -12,7 +12,8 @@
     "predev": "npm run build:dep & npm run build:css & npm run build:js",
     "build:css": "cssnext -v --sourcemap --watch --compress --no-rem example/**/*.src.css example/css/all.min.css &",
     "build:js": "babel --watch --out-file doorglass.min.js doorglass.js &",
-    "build:dep": "mkdir -p jquery && cp node_modules/jquery/dist/jquery.min.* jquery/"
+    "build:dep": "mkdir -p jquery && cp node_modules/jquery/dist/jquery.min.* jquery/",
+    "what": "env"
   },
   "OLDscripts": {
     "predev": "bin/watch.js --debug --watch example/**/*.src.css 'npm run build:css' &"
